@@ -78,38 +78,41 @@ with col2:
 
 
 
+
 st.markdown("""
 <style>
 
 .stApp{
-background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+background-image:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
 url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600");
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
+/* Login card */
 div[data-testid="column"]:nth-child(2){
-background: rgba(255,255,255,0.12);
-backdrop-filter: blur(18px);
-padding:40px;
-border-radius:25px;
-border:1px solid rgba(255,255,255,0.2);
-box-shadow:0 8px 32px rgba(0,0,0,0.4);
-}
 
-h1,h2,h3,label{
-color:white !important;
-}
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.18),
+rgba(255,255,255,0.05)
+);
 
-.stButton button{
-background:#ff5a2c;
-color:white;
-border:none;
+backdrop-filter: blur(25px);
+
+padding:50px;
+
 border-radius:30px;
-height:50px;
-font-size:18px;
-font-weight:bold;
+
+border:1px solid rgba(255,255,255,0.2);
+
+box-shadow:
+0px 8px 32px rgba(0,0,0,0.5);
+
 }
 
 </style>
