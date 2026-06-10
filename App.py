@@ -66,6 +66,20 @@ with col2:
         use_container_width=True
     )
 
+    if login:
+    if username == "" or password == "":
+        st.warning("Please fill all fields")
+    else:
+        cursor.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password))
+        user = cursor.fetchone()
+
+        if user:
+            st.success("Login Successful 🎉")
+            st.session_state["logged_in"] = True
+            st.session_state["user"] = username
+        else:
+            st.error("Invalid username or password")
+
     st.markdown(
         "<p style='text-align:center;color:#d1d5db;'>Forgot Password?</p>",
         unsafe_allow_html=True
@@ -76,6 +90,20 @@ with col2:
         use_container_width=True
     )
 
+    
+if signup:
+    if username == "" or password == "":
+        st.warning("Please fill all fields")
+    else:
+        cursor.execute("SELECT * FROM users WHERE username=?", (username,))
+        existing_user = cursor.fetchone()
+
+        if existing_user:
+            st.error("User already exists!")
+        else:
+            cursor.execute("INSERT INTO users(username, password) VALUES(?,?)", (username, password))
+            conn.commit()
+            st.success("Account created successfully 🎉")
 
 
 
