@@ -114,6 +114,21 @@ box-shadow:
 0px 8px 32px rgba(0,0,0,0.5);
 
 }
+/* Sign In Button */
+div.stButton > button:first-child{
+    background: #ff5a1f;
+    color: white;
+    border-radius: 30px;
+    height: 50px;
+    border: none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+div.stButton > button:first-child:hover{
+    background: #ff6f3d;
+    color:white;
+}
 
 </style>
 """, unsafe_allow_html=True)
