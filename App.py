@@ -42,26 +42,39 @@ with col4:
             st.error("Invalid Username or Password")
 
 
+
 st.markdown("""
 <style>
 
 .stApp{
-background-color:#0f172a;
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
 }
 
 div[data-testid="column"]:nth-child(2){
-background-color:rgba(255,255,255,0.1);
+background: rgba(255,255,255,0.12);
+backdrop-filter: blur(18px);
 padding:40px;
-border-radius:20px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 8px 32px rgba(0,0,0,0.4);
+}
+
+h1,h2,h3,label{
+color:white !important;
 }
 
 .stButton button{
-background-color:#ff5c35;
+background:#ff5a2c;
 color:white;
-border-radius:25px;
+border:none;
+border-radius:30px;
 height:50px;
 font-size:18px;
-border:none;
+font-weight:bold;
 }
 
 </style>
