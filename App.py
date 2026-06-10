@@ -16,30 +16,40 @@ conn.commit()
 st.title("🔐 Login Page")
 
 
-col1, col2 = st.columns([1.5, 1])
+col1, col2 = st.columns([1.3, 1])
 
 with col1:
-    st.image("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000")
+    st.markdown("""
+    <div style='margin-top:180px; color:white;'>
+        <h1 style='font-size:55px;'>Start for free and get attractive offers today !</h1>
+        <p style='font-size:18px; color:#d1d5db;'>
+        Discover thousands of opportunities and manage your account easily.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.subheader("Wonder Sign In")
+
+    st.markdown("<h2 style='color:white;'>Wonder Sign In</h2>", unsafe_allow_html=True)
 
     username = st.text_input("Email Address")
-    password = st.text_input("Password", type="password")
 
-    col3, col4 = st.columns(2)
+    password = st.text_input(
+        "Password",
+        type="password"
+    )
 
-with col3:
-    login = st.button("🟠 Sign In", use_container_width=True)
+    remember = st.checkbox("Keep me logged in")
 
-with col4:
-    signup = st.button("Sign Up", use_container_width=True)
+    login = st.button(
+        "Sign In",
+        use_container_width=True
+    )
 
-    if login:
-        if username == "admin" and password == "1234":
-            st.success("Login Successful!")
-        else:
-            st.error("Invalid Username or Password")
+    signup = st.button(
+        "Sign Up",
+        use_container_width=True
+    )
 
 
 
