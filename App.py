@@ -27,7 +27,13 @@ with col2:
     username = st.text_input("Email Address")
     password = st.text_input("Password", type="password")
 
-    login = st.button("Sign In")
+    col3, col4 = st.columns(2)
+
+with col3:
+    login = st.button("🟠 Sign In", use_container_width=True)
+
+with col4:
+    signup = st.button("Sign Up", use_container_width=True)
 
     if login:
         if username == "admin" and password == "1234":
@@ -38,6 +44,7 @@ with col2:
 
 st.markdown("""
 <style>
+
 .stApp{
 background-color:#0f172a;
 }
@@ -47,5 +54,15 @@ background-color:rgba(255,255,255,0.1);
 padding:40px;
 border-radius:20px;
 }
+
+.stButton button{
+background-color:#ff5c35;
+color:white;
+border-radius:25px;
+height:50px;
+font-size:18px;
+border:none;
+}
+
 </style>
 """, unsafe_allow_html=True)
