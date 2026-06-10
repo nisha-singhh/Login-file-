@@ -38,13 +38,25 @@ Manage accounts, monitor user data, and create secure dashboards with role-based
 
 with col2:
 
-    st.markdown("<h2 style='color:white;'>Wonder Sign In</h2>", unsafe_allow_html=True)
+    st.markdown("""
+    <h2 style='color:white; text-align:center;'>
+    Wonder Sign In
+    </h2>
 
-    username = st.text_input("Email Address")
+    <p style='color:#d1d5db; text-align:center;'>
+    Access your account securely
+    </p>
+    """, unsafe_allow_html=True)
+
+    username = st.text_input(
+        "Email Address",
+        placeholder="Enter your email"
+    )
 
     password = st.text_input(
         "Password",
-        type="password"
+        type="password",
+        placeholder="Enter your password"
     )
 
     remember = st.checkbox("Keep me logged in")
@@ -54,8 +66,13 @@ with col2:
         use_container_width=True
     )
 
+    st.markdown(
+        "<p style='text-align:center;color:#d1d5db;'>Forgot Password?</p>",
+        unsafe_allow_html=True
+    )
+
     signup = st.button(
-        "Sign Up",
+        "Create Account",
         use_container_width=True
     )
 
