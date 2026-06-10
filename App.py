@@ -91,19 +91,19 @@ with col2:
     )
 
     
-if signup:
-    if username == "" or password == "":
-        st.warning("Please fill all fields")
-    else:
-        cursor.execute("SELECT * FROM users WHERE username=?", (username,))
-        existing_user = cursor.fetchone()
-
-        if existing_user:
-            st.error("User already exists!")
+    if signup:
+        if username == "" or password == "":
+            st.warning("Please fill all fields")
         else:
-            cursor.execute("INSERT INTO users(username, password) VALUES(?,?)", (username, password))
-            conn.commit()
-            st.success("Account created successfully 🎉")
+            cursor.execute("SELECT * FROM users WHERE username=?", (username,))
+            existing_user = cursor.fetchone()
+
+            if existing_user:
+                st.error("User already exists!")
+            else:
+                cursor.execute("INSERT INTO users(username, password) VALUES(?,?)", (username, password))
+                conn.commit()
+                st.success("Account created successfully 🎉")
 
 
 
