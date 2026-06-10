@@ -20,13 +20,21 @@ col1, col2 = st.columns([1.3, 1])
 
 with col1:
     st.markdown("""
-    <div style='margin-top:180px; color:white;'>
-        <h1 style='font-size:55px;'>Start for free and get attractive offers today !</h1>
-        <p style='font-size:18px; color:#d1d5db;'>
-        Discover thousands of opportunities and manage your account easily.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+<div style='margin-top:180px; color:white;'>
+
+<h1 style='font-size:55px;'>
+Secure User Authentication System
+</h1>
+
+<p style='font-size:20px; color:#d1d5db;'>
+
+Build a powerful authentication platform with separate User and Admin panels.
+Manage accounts, monitor user data, and create secure dashboards with role-based access.
+
+</p>
+
+</div>
+""", unsafe_allow_html=True)
 
 with col2:
 
