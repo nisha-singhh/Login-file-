@@ -117,9 +117,9 @@ OAuth Login (Google/GitHub)
 
 Your Name
 
-GitHub: https://github.com/your-username
+GitHub: https://github.com/nisha-singhh
 
-LinkedIn: https://linkedin.com/in/your-profile
+LinkedIn: https://linkedin.com/in/nisha-singhh
 
 ⭐ Support
 
